@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="stylesheet" href="/Assets/Styles/Main.css">
+</head>
+
+<body class="flex-content">
+    <header class="flex-child">
+        <h1>Add</h1>
+        <a id="login" href="">Login</a>
+    </header>
+    <main class="flex-child">
+        <nav>
+            <ul>
+                <li><a href="/./Index.html">Home</a></li>
+                <li><a href="./Add.html">Add</a></li>
+                <li><a href="./Collection.html">Collection</a></li>
+                <li><a href="./Wish-List.html">Wish-List</a></li>
+                <li><a href="./Where-to-Buy.html">Where-to-Buy</a></li>
+            </ul>
+        </nav>
+        <article>
+            <form>
+                <label for="fName">Name</label>
+                <input type="text" id="fName">
+                <label for="fAuthor">Author</label>
+                <input type="text" id="fAuthor">
+                <label for="fCategory">Category</label>
+                <select name="fieldCategory" id="fCategory">
+                    <option value="None">Select a category</option>
+                    <option value="BK">Book</option>
+                    <option value="MG">Manga</option>
+                    <option value="CB">Comic</option>
+                    <option value="VG">Video Game</option>
+                </select>
+                <label for="fDescription">Description</label>
+                <textarea name="fieldDescription" id="fDescription" placeholder="Write something.." cols="30"
+                    rows="10"></textarea>
+                <label for="fFile">Image</label>
+                <input type="file" id="fFile">
+                <div id="formButtons">
+                    <input type="button" value="Cancel">
+                    <input type="reset" value="Reset Fields">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </article>
+    </main>
+    <footer class="flex-child">
+        <h1>Footer</h1>
+    </footer>
+</body>
+
+</html>

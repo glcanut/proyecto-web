@@ -1,0 +1,373 @@
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+  }
+
+  .flex-content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+  }
+
+  header {
+    height: 10vh;
+  }
+
+  main {
+    height: 200vh;
+    display: flex;
+  }
+
+  footer {
+    height: 10vh;
+  }
+
+  nav {
+    height: 100%;
+  }
+
+  article {
+    width: 100%;
+    /* overflow: auto; */
+    padding: 10px;
+    background-color: #504f4f;
+  }
+
+  #cards {
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #504f4f;
+    height: 100%;
+  }
+
+  nav ul {
+    background-color: #333333;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #14987b;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  header {
+    background-color: #333;
+  }
+
+  footer {
+    background-color: #333;
+    margin: 0;
+  }
+
+  footer h1 {
+    margin: auto;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: auto;
+  }
+
+  #login {
+    float: right;
+  }
+
+  .box {
+    width: 100%;
+    height: 300px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .box h1 {
+    text-align: center;
+  }
+
+  /* #box-1.box {
+    background-color: #14987b;
+
+  }
+
+  #box-2.box {
+    background-color: #2311c4;
+
+  }
+
+  #box-3.box {
+    background-color: #176bcc;
+
+  }
+
+  #box-4.box {
+    background-color: #035726;
+
+  } */
+
+  input[type=text],
+  select,
+  textarea {
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 0 12px 0;
+    display: inline-block;
+    color: #ffffff;
+  }
+
+  #fCategory {
+    width: 42%;
+  }
+
+  #formButtons {
+    justify-self: right;
+    margin: 50px;
+    padding: 10px;
+  }
+
+  article form {
+    display: grid;
+  }
+
+  input[type=button],
+  input[type=submit],
+  input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .mainHeader {
+    display: flex;
+  }
+
+  .loginSvg {
+    height: 30px;
+  }
+
+  .WTBMap {
+    width: 200px;
+    height: 100px;
+  }
+
+  table {
+    color: white;
+  }
+
+  td h1 {
+    text-align: left;
+  }
+
+  button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .wtbTable tr td:first-child {
+    padding-right: 20px;
+  }
+
+  .svgIcon {
+    width: 20px;
+    padding: 20px;
+  }
+
+  .toolsTable tr td:nth-child(2) {
+    text-align: end;
+    width: 90%;
+  }
+
+  .collectionTable .cardTable {
+    border-style: solid;
+  }
+
+  .collectionImage {
+    width: 40%;
+    padding: 5px;
+  }
+
+  .collectionTools {
+    display: flex;
+  }
+
+  .collectionTools .svgIcon {
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .collectionSearch {
+    height: 26px;
+    margin-top: 3px;
+  }
+
+  .collectionButton {
+    padding: 8px 25px;
+  }
+
+  .cardTable h1 {
+    text-align: end;
+  }
+
+  .toolsTable tr td:nth-child(2) .svgIcon {
+    padding: 0px;
+    margin-right: 6px;
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------------------------------------------------- */
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    top: 8px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: #2196F3;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+    height: 20px;
+    width: 40px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------------- */
+  /* -------------------------------------------------------------------------------------------------------------------- */
+
+  .categoryTable {
+    width: 100%;
+  }
+
+  .categoryTable tr td:first-child {
+    text-align: end;
+  }
+
+  .categoryTable tr td:nth-child(2) {
+    width: 7%;
+  }
+
+  .wishListTools {
+    width: 100%;
+  }
+
+  .wishListTools tr td:first-child {
+    width: 50%;
+  }
+
+  .wishListTools tr td:last-child {
+    text-align: end;
+  }
+
+  .wishListTools .svgIcon {
+    padding: 0;
+    margin-right: 5px;
+  }
+
+  .wishListResultTable .cardTable {
+    border-style: solid;
+  }
+
+  .cardsTable {
+    width: 100%;
+  }
+
+  .cardsTable tr td {
+    border: 1px solid gray;
+    width: 20%;
+  }
+
+  hr {
+    width: 97%;
+    margin: 0;
+    color: gray;
+  }
