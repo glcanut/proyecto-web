@@ -5,118 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where to Buy</title>
-    <link rel="stylesheet" href="/Assets/Styles/Main.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Assets/Styles/main2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body class="flex-content">
-    <header class="flex-child">
-        <h1>Where to Buy</h1>
-        <a id="login" href="">Login</a>
-    </header>
-    <main class="flex-child">
-        <nav>
-            <ul>
-                <li><a href="/./Index.html">Home</a></li>
-                <li><a href="./Add.html">Add</a></li>
-                <li><a href="./Collection.html">Collection</a></li>
-                <li><a href="./Wish-List.html">Wish-List</a></li>
-                <li><a href="./Where-to-Buy.html">Where-to-Buy</a></li>
-            </ul>
-        </nav>
-        <article>
-            <div>
-                <button>Add Place</button>
-                <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="#ffffff"
-                        d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
-                </svg>
+<body>
+    <header class="header d-flex align-items-center justify-content-between">
+        <div class="row header-row">
+            <div class="col-6 text-end">
+                <h1>Where to Buy</h1>
+                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#sidebarMenu"
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
             </div>
-            <table class="wtbTable">
-                <tr>
-                    <td>
+            <div class="col-6 text-end">
+                <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid flex-grow-1 d-flex p-0 main-container">
+        <div class="collapse d-md-block col-md-3 col-lg-2 p-0 border-right" id="sidebarMenu">
+            <div class="sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="/./index.html" class="nav-link link-body-emphasis" aria-current="page">
+                            <i class="bi bi-house-fill iconColor me-2"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./add.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-file-plus-fill iconColor me-2"></i>
+                            Add
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./wish-list.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-card-checklist iconColor me-2"></i>
+                            Wish List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./where-to-buy.html" class="nav-link active ">
+                            <i class="bi bi-bag-fill iconColor me-2"></i>
+                            Where to Buy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./collection.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-collection-fill iconColor me-2"></i>
+                            Collection
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div class="col-10">
+            <div class="main-content p-3 rounded">
+                <div class="row m-3">
+                    <div class="col-4">
+                        <button type="button" class="btn btn-primary">Add New Place</button>
+                        <i class="bi bi-funnel-fill iconColor toolIcon m-10"></i>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-4">
                         <h1>Cuspide</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Address:</b> Av. Eva Perón 5856, S2008 Rosario, Santa Fe <br>
-                        <b>Tel:</b> 0341 457-0889 <br>
-                        <b>Hours:</b> 10am - 7pm <br>
-                        <b>Web:</b> http://www.cuspide.com/ <br>
-                    </td>
-                    <td>
-                        <img class="WTBMap" src="/Assets/Img/cuspide.png" alt=""> <br>
-                    </td>
-                    <td>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#ffffff"
-                                d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                        </svg> <br>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="#ffffff"
-                                d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                        </svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+                        <p>
+                            <b>Address:</b> Av. Eva Perón 5856, S2008 Rosario, Santa Fe <br>
+                            <b>Tel:</b> 0341 457-0889 <br>
+                            <b>Hours:</b> 10am - 7pm <br>
+                            <b>Web:</b> http://www.cuspide.com/ <br>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.616327548314!2d-60.7010777!3d-32.934733699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b65335b5533729%3A0x3219f41225d4464b!2sAv.%20Eva%20Per%C3%B3n%205856%2C%20S2008QJO%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1716835555038!5m2!1ses!2sar"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col">
+                        <div class="iconColor ">
+                            <i class="bi bi-pencil-fill me-2"></i><br>
+                            <i class="bi bi-trash-fill me-2"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-4">
                         <h1>Yenny</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Address:</b> Local 1072 Portal Rosario Shopping, Nansen 323, S2013 APG, Santa Fe <br>
-                        <b>Tel:</b> 0341 547-7260 <br>
-                        <b>Hours:</b> 10am - 9pm <br>
-                        <b>Web:</b> https://www.yenny-elateneo.com/ <br>
-                    </td>
-                    <td>
-                        <img class="WTBMap" src="/Assets/Img/yenny.png" alt="">
-                    </td>
-                    <td>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#ffffff"
-                                d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                        </svg> <br>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="#ffffff"
-                                d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                        </svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+                        <p>
+                            <b>Address:</b> Local 1072 Portal Rosario Shopping, Nansen 323, S2013 APG, Santa Fe <br>
+                            <b>Tel:</b> 0341 547-7260 <br>
+                            <b>Hours:</b> 10am - 9pm <br>
+                            <b>Web:</b> https://www.yenny-elateneo.com/ <br>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.532010098582!2d-60.68588942359704!3d-32.910539570067144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b65366fba6c377%3A0xc8f292ffeac0174f!2sNansen%20323%2C%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1716836860044!5m2!1ses!2sar"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col">
+                        <div class="iconColor">
+                            <i class="bi bi-pencil-fill me-2"></i><br>
+                            <i class="bi bi-trash-fill me-2"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-4">
                         <h1>La Revisteria</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Address:</b> Córdoba 1479, Rosario, Santa Fe <br>
-                        <b>Tel:</b> 0341 558-9986 <br>
-                        <b>Hours:</b> 9am - 8pm <br>
-                        <b>Web:</b> http://www.larevisteriacomics.com/ <br>
-                    </td>
-                    <td>
-                        <img class="WTBMap" src="/Assets/Img/la revisteria.png" alt="">
-                    </td>
-                    <td>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#ffffff"
-                                d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                        </svg> <br>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="#ffffff"
-                                d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                        </svg>
-                    </td>
-                </tr>
-            </table>
-        </article>
-    </main>
-    <footer class="flex-child">
-        <h1>Footer</h1>
+                        <p>
+                            <b>Address:</b> Córdoba 1479, Rosario, Santa Fe <br>
+                            <b>Tel:</b> 0341 558-9986 <br>
+                            <b>Hours:</b> 9am - 8pm <br>
+                            <b>Web:</b> http://www.larevisteriacomics.com/ <br>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.204677228687!2d-60.64602602359561!3d-32.94560517183725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab16361875c7%3A0x8ca5580e978c33b8!2sC%C3%B3rdoba%201479%2C%20S2000AWU%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1716837050949!5m2!1ses!2sar"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col">
+                        <div class="iconColor ">
+                            <i class="bi bi-pencil-fill me-2"></i><br>
+                            <i class="bi bi-trash-fill me-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark">
+        <div class="col-md-4 d-flex align-items-center">
+            <p class="mb-3 mb-md-0">© Proyecto Final 2024 Gonzalo Canut</p>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+            <li class="ms-3"><a href="#"><i class="bi bi-twitter-x iconColor"></i></a></li>
+            <li class="ms-3"><a href="#"><i class="bi bi-instagram iconColor"></i></a></li>
+            <li class="ms-3"><a href="#"><i class="bi bi-facebook iconColor"></i></a></li>
+        </ul>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

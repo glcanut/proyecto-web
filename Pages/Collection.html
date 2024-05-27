@@ -5,254 +5,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection</title>
-    <link rel="stylesheet" href="/Assets/Styles/Main.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Assets/Styles/main2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body class="flex-content">
-    <header class="flex-child">
-        <h1>Collection</h1>
-        <a id="login" href="">Login</a>
+<body>
+    <header class="header d-flex align-items-center justify-content-between">
+        <div class="row header-row">
+            <div class="col-6 text-end">
+                <h1>Collection</h1>
+                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#sidebarMenu"
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
+            </div>
+            <div class="col-6 text-end">
+                <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
+        </div>
     </header>
-    <main class="flex-child">
-        <nav>
-            <ul>
-                <li><a href="/./Index.html">Home</a></li>
-                <li><a href="./Add.html">Add</a></li>
-                <li><a href="./Collection.html">Collection</a></li>
-                <li><a href="./Wish-List.html">Wish-List</a></li>
-                <li><a href="./Where-to-Buy.html">Where-to-Buy</a></li>
-            </ul>
-        </nav>
-        <article>
-            <table class="toolsTable">
-                <tr>
-                    <td>
-                        <div class="collectionTools">
-                            <search>
-                                <form>
-                                    <input class="collectionSearch" name="fsrch" id="fsrch" placeholder="Search">
-                                </form>
-                            </search>
-                            <button class="collectionButton">Search</button>
-                            <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="#04AA6D"
-                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" />
-                            </svg>
-                            <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="#04AA6D"
-                                    d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
-                            </svg>
+    <div class="container-fluid flex-grow-1 d-flex p-0 main-container">
+        <div class="collapse d-md-block col-md-3 col-lg-2 p-0 border-right" id="sidebarMenu">
+            <div class="sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="/./index.html" class="nav-link link-body-emphasis" aria-current="page">
+                            <i class="bi bi-house-fill iconColor me-2"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./add.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-file-plus-fill iconColor me-2"></i>
+                            Add
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./wish-list.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-card-checklist iconColor me-2"></i>
+                            Wish List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./where-to-buy.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-bag-fill iconColor me-2"></i>
+                            Where to Buy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./collection.html" class="nav-link active">
+                            <i class="bi bi-collection-fill iconColor me-2"></i>
+                            Collection
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div class="col-10">
+            <div class="main-content p-3 rounded">
+                <div class="row collectionTools mb-4">
+                    <div class="col-4">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="text" placeholder="Search">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </form>
+                    </div>
+                    <div class="col-4">
+                        <i class="bi bi-funnel-fill iconColor toolIcon"></i>
+                        <i class="bi bi-plus-circle-fill iconColor toolIcon"></i>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <i class="bi bi-grid-3x2-gap-fill toolIcon"></i>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
                         </div>
-                    </td>
-                    <td>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="#04AA6D"
-                                d="M128 136c0-22.1-17.9-40-40-40L40 96C17.9 96 0 113.9 0 136l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40l0-48zm0 192c0-22.1-17.9-40-40-40H40c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40H88c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM288 328c0-22.1-17.9-40-40-40H200c-22.1 0-40 17.9-40 40l0 48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328zm32-192v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V136c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zM448 328c0-22.1-17.9-40-40-40H360c-22.1 0-40 17.9-40 40v48c0 22.1 17.9 40 40 40h48c22.1 0 40-17.9 40-40V328z" />
-                        </svg>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="#04AA6D"
-                                d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z" />
-                        </svg>
-                    </td>
-                </tr>
-            </table>
+                        <i class="bi bi-list toolIcon"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/cf/51/cf5137331c7c21c6daa72410ecccc714.jpg"
+                                        class="img-fluid rounded-start collectionImage" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fourth Wing</h5>
+                                        <p class="card-text">Author: Rebecca Yarros</p>
+                                        <p class="card-text">Category: Fantasy, Romance</p>
+                                        <div class="collectionIcons">
+                                            <i class="bi bi-pencil-fill me-2"></i>
+                                            <i class="bi bi-trash-fill me-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/61/93/6193e99db400ec9e1843f11734ee2113.jpg"
+                                        class="img-fluid rounded-start collectionImage" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Iron Flame</h5>
+                                        <p class="card-text">Author: Rebecca Yarros</p>
+                                        <p class="card-text">Category: Fantasy, Romance</p>
+                                        <div class="collectionIcons">
+                                            <i class="bi bi-pencil-fill me-2"></i>
+                                            <i class="bi bi-trash-fill me-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/0f/61/0f61dada0ec36a04bcf55b53763f0a43.jpg"
+                                        class="img-fluid rounded-start collectionImage" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Silmarillion</h5>
+                                        <p class="card-text">Author: J.R.R. Tolkien</p>
+                                        <p class="card-text">Category: Fantasy</p>
+                                        <div class="collectionIcons">
+                                            <i class="bi bi-pencil-fill me-2"></i>
+                                            <i class="bi bi-trash-fill me-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://www.harpercollins.com/cdn/shop/files/9780063347540_4d2a0559-1163-4045-a8d4-ecca9ef743f8_1522x.jpg?v=1716271373"
+                                        class="img-fluid rounded-start collectionImage" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Hobbit</h5>
+                                        <p class="card-text">Author: J.R.R. Tolkien</p>
+                                        <p class="card-text">Category: Fantasy</p>
+                                        <div class="collectionIcons">
+                                            <i class="bi bi-pencil-fill me-2"></i>
+                                            <i class="bi bi-trash-fill me-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://tolkiengateway.net/w/images/5/57/The_Lord_of_the_Rings_1954-v1.png"
+                                        class="img-fluid rounded-start collectionImage" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Lord Of The Ring</h5>
+                                        <p class="card-text">Author: J.R.R. Tolkien</p>
+                                        <p class="card-text">Category: Fantasy</p>
+                                        <div class="collectionIcons">
+                                            <i class="bi bi-pencil-fill me-2"></i>
+                                            <i class="bi bi-trash-fill me-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://i0.wp.com/ken-follett.com/wp-content/uploads/2023/02/AOL-USA-Cover.jpeg?w=297&ssl=1"
+                                        class="img-fluid rounded-start collectionImage" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Armor of Light</h5>
+                                        <p class="card-text">Author: Ken Follett</p>
+                                        <p class="card-text">Category: Historical Fiction</p>
+                                        <div class="collectionIcons">
+                                            <i class="bi bi-pencil-fill me-2"></i>
+                                            <i class="bi bi-trash-fill me-2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top bg-dark">
+        <div class="col-md-4 d-flex align-items-center">
+            <p class="mb-3 mb-md-0">© Proyecto Final 2024 Gonzalo Canut</p>
+        </div>
 
-            <table class="collectionTable">
-                <tr>
-                    <td>
-                        <table class="cardTable">
-                            <tr>
-                                <td>
-                                    <h1>Fourth Wings</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="collectionImage"
-                                        src="https://m.media-amazon.com/images/I/81guTMwfvPL._AC_UF1000,1000_QL80_.jpg"
-                                        alt=""> <br>
-                                </td>
-                                <td>
-                                    <b>Author:</b> Rebecca Yarros <br>
-                                    <b>Category:</b> Fantasy <br>
-                                </td>
-                                <td>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="#04AA6D"
-                                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                    </svg> <br>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="#04AA6D"
-                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table class="cardTable">
-                            <tr>
-                                <td>
-                                    <h1>Fourth Wings</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="collectionImage"
-                                        src="https://m.media-amazon.com/images/I/81guTMwfvPL._AC_UF1000,1000_QL80_.jpg"
-                                        alt=""> <br>
-                                </td>
-                                <td>
-                                    <b>Author:</b> Rebecca Yarros <br>
-                                    <b>Category:</b> Fantasy <br>
-                                </td>
-                                <td>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="#04AA6D"
-                                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                    </svg> <br>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="#04AA6D"
-                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table class="cardTable">
-                            <tr>
-                                <td>
-                                    <h1>Fourth Wings</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="collectionImage"
-                                        src="https://m.media-amazon.com/images/I/81guTMwfvPL._AC_UF1000,1000_QL80_.jpg"
-                                        alt=""> <br>
-                                </td>
-                                <td>
-                                    <b>Author:</b> Rebecca Yarros <br>
-                                    <b>Category:</b> Fantasy <br>
-                                </td>
-                                <td>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="#04AA6D"
-                                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                    </svg> <br>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="#04AA6D"
-                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table class="cardTable">
-                            <tr>
-                                <td>
-                                    <h1>Fourth Wings</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="collectionImage"
-                                        src="https://m.media-amazon.com/images/I/81guTMwfvPL._AC_UF1000,1000_QL80_.jpg"
-                                        alt=""> <br>
-                                </td>
-                                <td>
-                                    <b>Author:</b> Rebecca Yarros <br>
-                                    <b>Category:</b> Fantasy <br>
-                                </td>
-                                <td>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="#04AA6D"
-                                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                    </svg> <br>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="#04AA6D"
-                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table class="cardTable">
-                            <tr>
-                                <td>
-                                    <h1>Fourth Wings</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="collectionImage"
-                                        src="https://m.media-amazon.com/images/I/81guTMwfvPL._AC_UF1000,1000_QL80_.jpg"
-                                        alt=""> <br>
-                                </td>
-                                <td>
-                                    <b>Author:</b> Rebecca Yarros <br>
-                                    <b>Category:</b> Fantasy <br>
-                                </td>
-                                <td>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="#04AA6D"
-                                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                    </svg> <br>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="#04AA6D"
-                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table class="cardTable">
-                            <tr>
-                                <td>
-                                    <h1>Fourth Wings</h1>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="collectionImage"
-                                        src="https://m.media-amazon.com/images/I/81guTMwfvPL._AC_UF1000,1000_QL80_.jpg"
-                                        alt=""> <br>
-                                </td>
-                                <td>
-                                    <b>Author:</b> Rebecca Yarros <br>
-                                    <b>Category:</b> Fantasy <br>
-                                </td>
-                                <td>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="#04AA6D"
-                                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
-                                    </svg> <br>
-                                    <svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="#04AA6D"
-                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
-                                    </svg>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </article>
-    </main>
-    <footer class="flex-child">
-        <h1>Footer</h1>
+        <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+            <li class="ms-3"><a href="#"><i class="bi bi-twitter-x iconColor"></i></a></li>
+            <li class="ms-3"><a href="#"><i class="bi bi-instagram iconColor"></i></a></li>
+            <li class="ms-3"><a href="#"><i class="bi bi-facebook iconColor"></i></a></li>
+        </ul>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

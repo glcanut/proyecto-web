@@ -5,65 +5,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final</title>
-    <link rel="stylesheet" href="Assets/Styles/Main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/Styles/main2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body class="flex-content">
-    <header class="flex-child">
-        <div class="mainHeader">
-            <h1>Header</h1>
-            <a id="login" href="">Login</a>
-            <svg class="loginSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                    d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
-            </svg>
+<body>
+    <header class="header d-flex align-items-center justify-content-between">
+        <div class="row header-row">
+            <div class="col-6 text-end">
+                <h1>Home</h1>
+                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#sidebarMenu"
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
+            </div>
+            <div class="col-6 text-end">
+                <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
         </div>
     </header>
-    <main class="flex-child">
-        <nav>
-            <ul>
-                <li><a href="./Pages/Add.html">Add</a></li>
-                <li><a href="./Pages/Wish-List.html">Wish-List</a></li>
-                <li><a href="./Pages/Where-to-Buy.html">Where-to-Buy</a></li>
-                <li><a href="./Pages/Collection.html">Collection</a></li>
-            </ul>
-        </nav>
-        <article Id="cards">
-            <table class="cardsTable">
-                <tr>
-                    <td>
-                        <div id="box-1" class="box">
-                            <h1>Last purchased by type</h1>
-                            <hr>
+    <div class="container-fluid flex-grow-1 d-flex p-0 main-container">
+        <div class="collapse d-md-block col-md-3 col-lg-2 p-0 border-right" id="sidebarMenu">
+            <div class="sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">
+                            <i class="bi bi-house-fill iconColor me-2"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./Pages/add.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-file-plus-fill iconColor me-2"></i>
+                            Add
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./Pages/wish-list.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-card-checklist iconColor me-2"></i>
+                            Wish List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./Pages/where-to-buy.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-bag-fill iconColor me-2"></i>
+                            Where to Buy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./Pages/collection.html" class="nav-link link-body-emphasis">
+                            <i class="bi bi-collection-fill iconColor me-2"></i>
+                            Collection
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main class="content col-md-9 col-lg-10">
+            <div class="content main-card-container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 p-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                Last added by type
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
-                    </td>
-                    <td>
-                        <div id="box-2" class="box">
-                            <h1>Utilities</h1>
-                            <hr>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 p-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                Last purchased by type
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="box-3" class="box">
-                            <h1>News</h1>
-                            <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6  col-xs-12 p-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                Statistics
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
-                    </td>
-                    <td>
-                        <div id="box-4" class="box">
-                            <h1>Statistics</h1>
-                            <hr>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 p-3">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                News
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
-                    </td>
-                </tr>
-            </table>
-        </article>
-    </main>
-    <footer class="flex-child">
-        <h1>Footer</h1>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 bg-dark">
+        <div class="col-md-4 d-flex align-items-center">
+            <p class="mb-3 mb-md-0">© Proyecto Final 2024 Gonzalo Canut</p>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+            <li class="ms-3"><a href="#"><i class="bi bi-twitter-x iconColor"></i></a></li>
+            <li class="ms-3"><a href="#"><i class="bi bi-instagram iconColor"></i></a></li>
+            <li class="ms-3"><a href="#"><i class="bi bi-facebook iconColor"></i></a></li>
+        </ul>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
