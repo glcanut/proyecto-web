@@ -6,20 +6,21 @@ body {
 }
 
 header {
-    padding:0.5rem;
+    padding: 0.5rem;
     border-bottom: 1px solid gray;
 
 }
-.main-container{
+
+.main-container {
     height: 100vh;
 }
 
 footer {
-    border-top: 1px solid gray ;
+    border-top: 1px solid gray;
 
 }
 
-.sidebar{
+.sidebar {
     background-color: #343a40;
     border-right: 1px solid gray;
     height: 100%
@@ -38,11 +39,8 @@ footer {
     color: white !important;
 }
 
-.mainContent {
-    margin: 0;
-}
-
-.iconColor, footer {
+.iconColor,
+footer {
     color: white;
 }
 
@@ -64,14 +62,42 @@ footer {
     background: url("../Img/books.jpg") fixed;
 }
 
-.header .row{
-        width: 100%;
+.header .row {
+    width: 100%;
 
 }
 
-.main-card-container{
+.main-card-container {
     margin: 1rem;
     border-radius: 1rem;
     background-color: #495057;
     padding: 1rem;
+}
+
+.btnSize {
+    font-size: 30px;
+}
+
+.btnLogin {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+}
+
+.btnStyle {
+    display: contents;
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        text-align: center;
+    }
+
+    .nav-item a {
+        display: grid;
+    }
+
+    .mainContent {
+        overflow: auto;
+    }
 }

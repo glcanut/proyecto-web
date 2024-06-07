@@ -12,25 +12,28 @@
 </head>
 
 <body>
-    <header class="header d-flex align-items-center justify-content-between">
-        <div class="row header-row">
-            <div class="col-6 text-end">
-                <h1>Home</h1>
+    <header class="header d-flex align-items-center justify-content-between bg-dark">
+        <div class="row header-row container-fluid">
+            <div class="col-xs-4 col-sm-4 col-4">
                 <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#sidebarMenu"
                     aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">&#9776;</span>
+                    <i class="bi bi-list iconColor btnSize"></i>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="col-6 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+            <div class="col-xs-4 col-sm-4 col-4 flex-column d-flex">
+                <h1 class="">Home</h1>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-4 text-end btnLogin">
+                <button type="button" class="btn btnStyle me-2"><i
+                        class="bi bi-person-circle iconColor btnSize"></i></button>
             </div>
         </div>
     </header>
     <div class="container-fluid flex-grow-1 d-flex p-0 main-container">
         <div class="collapse d-md-block col-md-3 col-lg-2 p-0 border-right" id="sidebarMenu">
             <div class="sidebar">
-                <ul class="nav flex-column">
+                <ul class="nav flex-column nav-pills">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" aria-current="page">
                             <i class="bi bi-house-fill iconColor me-2"></i>
@@ -55,7 +58,7 @@
                             Where to Buy
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./Pages/collection.html" class="nav-link link-body-emphasis">
                             <i class="bi bi-collection-fill iconColor me-2"></i>
                             Collection
@@ -64,7 +67,7 @@
                 </ul>
             </div>
         </div>
-        <main class="content col-md-9 col-lg-10">
+        <main class="content col-md-9 col-lg-10 mainContent">
             <div class="content main-card-container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-xs-12 p-3">
