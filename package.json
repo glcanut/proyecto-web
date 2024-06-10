@@ -1,0 +1,27 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "Proyecto final desarrollo web.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glcanut/proyecto-web.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "prepocesador",
+    "styles",
+    "node"
+  ],
+  "author": "Gonzalo L Canut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glcanut/proyecto-web/issues"
+  },
+  "homepage": "https://github.com/glcanut/proyecto-web#readme"
+}
