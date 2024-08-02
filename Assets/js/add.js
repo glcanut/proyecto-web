@@ -1,9 +1,19 @@
-document.getElementById("submit-button").addEventListener("click", saveData);
-document.getElementById("cancel-button").addEventListener("click", clearForm);
-
+let id = 1;
 let cards = JSON.parse(localStorage.getItem("add")) || [];
+let cardToEdit = JSON.parse(localStorage.getItem("edit"));
 
-function saveData() {
+if (cardToEdit) {
+  document.getElementById("fName").value = cardToEdit.name;
+  document.getElementById("fAuthor").value = cardToEdit.autor;
+  document.getElementById("fCategory").value = cardToEdit.category;
+  document.getElementById("fDescription").value = cardToEdit.description;
+
+  localStorage.removeItem("edit");
+  cards = cards.filter((element) => element.id !== id);
+  localStorage.setItem("add", JSON.stringify(cards));
+}
+
+const saveData = () => {
   let name = document.getElementById("fName").value;
   let autor = document.getElementById("fAuthor").value;
   let category = document.getElementById("fCategory").value;
@@ -15,18 +25,20 @@ function saveData() {
     return;
   }
 
-  let card = { name, autor, category, description, image };
+  let card = { id, name, autor, category, description, image };
 
   cards.push(card);
 
   localStorage.setItem("add", JSON.stringify(cards));
 
-  clearForm();
-}
+  id++;
 
-function clearForm() {
+  clearForm();
+};
+
+const clearForm = () => {
   document.getElementById("fName").value = "";
   document.getElementById("fAuthor").value = "";
   document.getElementById("fCategory").value = "";
   document.getElementById("fDescription").value = "";
-}
+};
